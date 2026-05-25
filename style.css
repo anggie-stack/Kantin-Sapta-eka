@@ -49,8 +49,10 @@ img.src="abdf2361-3fb0-42e1-9a1d-bfe1714cbfda.jpeg" { text-align: justify;
                                                      background-color: lightblue;}
 
 
-About.html {text-align: center;
-            font-size: medium;
-            font-family: Lucida sans;}
+About.html {display: flex;
+            align-items: center;
+            min-height: 100vh;
+            backround:url(../
+            
             
     
