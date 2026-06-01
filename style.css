@@ -49,6 +49,14 @@ img.src="abdf2361-3fb0-42e1-9a1d-bfe1714cbfda.jpeg" { text-align: justify;
                                                      height: auto; 
                                                      background-color: lightblue;}
 
+Home.html {
+    margin: 0;
+    height: 100vh;
+    background-image: url("5f9f90d4-aa5a-49c1-90f9-fdd54a0e9237.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
             
             
