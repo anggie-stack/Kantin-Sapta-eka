@@ -67,6 +67,12 @@ Home.html {
 <a href="home">home</a>
 <a href="design">design</a>
 </nav>
+<div class="icons"
+<a href="#" class="fas fa-heart"></a>
+<a href="#" class="fas fa-shopping-cart"></a>
+<a href="#" class="fas fa-user"></a>
+</div>
+
 
 </header>
 
