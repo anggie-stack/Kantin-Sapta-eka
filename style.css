@@ -54,7 +54,7 @@ Home.html {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+ header section :start
 header{
 position: fixed;
 top:0; left:0; right:0;
@@ -110,7 +110,7 @@ header .icons a:hover{
         border:.1rem solid rgba(0,0,0,.1)
         display: none;
     }
-
+ hearder section :end
 
 
 
