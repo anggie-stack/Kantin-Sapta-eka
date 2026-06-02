@@ -1,9 +1,6 @@
 /* Place your CSS styles in this file */
 body { 
-    background-color: lightseagreen;
-border: 0.5cm solid lightblue;
-border-radius: 10px;
-border-width: 2px;
+    color: rgb(0, 0, 50);
 }
 
 
