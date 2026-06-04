@@ -1,68 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kantin Sapta Eka</title>
 
-<html>
-    <head>
-        <meta charset="utf-8">
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+    margin:0;
+    padding:20px;
+}
 
-        <title>Blank template</title>
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+}
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">        
+h1{
+    color:#6a0dad;
+}
 
-        <!-- Load external phyton -->
-        <link rel="pycharm" href="program_utama.py">
+select{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    margin:15px 0;
+}
 
-        
-    </head>
+button{
+    background:#6a0dad;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
 
-    <body>
+button:hover{
+    background:#53108c;
+}
 
-        <h1>Kantin sapta eka</h1>
-        
-              <!-- header section starts -->
+#hasil{
+    margin-top:20px;
+    padding:15px;
+}
+</style>
+</head>
 
-<header>
+<body>
 
-<nav class="navbar">
-</li><a href="About">About</a>
-</li><a href="Home">Home</a>
-</li><a href="Design">Design</a>
-</nav>
-<div class="icons"
-<a href="#" class="fas fa-heart"></a>
-<a href="#" class="fas fa-shopping-cart"></a>
-<a href="#" class="fas fa-user"></a>
-</nav>
-    
-</header>
-    
+<div class="container">
 
-<!-- header section ends -->
+<h1>🍽️ Kantin Sapta Eka</h1>
 
-        <style> 
-        . bar {
-            border: 2px solid black;
-            padding: 10px;
-            width: 100%; 
-        }
-        </style>
+<p>
+A smarter way to choose what to eat at school.
+</p>
 
-    <img src="abdf2361-3fb0-42e1-9a1d-bfe1714cbfda.jpeg" width="200" height="200"><!doctype html>
+<select id="kantin">
+<option value="">-- Pilih Kantin --</option>
+</select>
 
-        <p>Welcome to kantin sapta eka!</p>
-            <p class="p2">"a smarter way to choose what to eat at school.”<br>
-                your go-to guide for what’s worth eating at school. <br>
-                go find your next bite! <br>
-            </p>
-            
-        <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%; overflow: hidden;">
-              <iframe 
-                  src="https://www.canva.com/design/DAHFNSSFlgw/2PP8WGPuG1vLoUEM_1ITwg/view?embed"
-                      style="position: absolute; width: 50%; height: 50%; top: 0; left: 0; border: none;"
-                          allowfullscreen>
-                            </iframe>
-                            </div>
-        
-    </body>
+<button onclick="lihatMenu()">Lihat Menu</button>
 
+<div id="hasil"></div>
+
+</div>
+
+<script>
+
+// DATABASE KANTIN
+const database_kantin = {
+    "mba dila": "https://canva.link/u0lmn6bp0lct6sj”,
+    "mang atap": "https://canva.link/23gd8lad70bkzv8",
+    "ceu siti": "https://canva.link/bke5w324a91pzwo",
+    "kang udin": "https://canva.link/p14znnkxdtihzdj",
+    "pak kumis": "https://canva.link/5x20lyckrkqbmn4",
+    "bu susi": "https://canva.link/spxhomzd9l30r1r",
+    "mass pi": "https://canva.link/up7tj1m0p3vkqqq",
+    "hafy 57": "https://canva.link/s5iiw9gk03ncp6r",
+    "mamilo": "https://canva.link/1iinggq4vfj8um6",
+    "pak iwan": "https://canva.link/2rgzh693d4pyfij"
+};
+
+// MEMASUKKAN DATA KE DROPDOWN
+const dropdown = document.getElementById("kantin");
+
+for (let nama in database_kantin) {
+    let option = document.createElement("option");
+    option.value = nama;
+    option.textContent = nama;
+    dropdown.appendChild(option);
+}
+
+// FUNGSI TOMBOL LIHAT MENU
+function lihatMenu() {
+
+    const pilihan = dropdown.value;
+
+    if (pilihan === "") {
+        alert("Silakan pilih kantin terlebih dahulu!");
+        return;
+    }
+
+    const link = database_kantin[pilihan];
+
+    document.getElementById("hasil").innerHTML = `
+        <h3>Kantin yang dipilih:</h3>
+        <p><strong>${pilihan}</strong></p>
+
+        <p>
+            <a href="${link}" target="_blank">
+                Klik di sini untuk membuka menu
+            </a>
+        </p>
+    `;
+
+    window.open(link, "_blank");
+}
+
+</script>
+
+</body>
 </html>
 
