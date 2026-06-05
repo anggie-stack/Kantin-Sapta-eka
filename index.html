@@ -4,27 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kantin Sapta Eka</title>
-<!-- load external CSS styles -->
-     <link rel="stylesheet" href="style.css">
-    
-    <nav class="navbar">
-    <a href="#">About</a>
-    <a href="#">Home</a>
-    <a href="#">Design</a>
-</nav>
-    
+
+<link rel="stylesheet" href="style.css">
+
 <style>
 body{
     font-family: Arial, sans-serif;
     background:#f4f4f4;
     text-align:center;
     margin:0;
-    padding:20px;
+    padding:0;
+}
+
+.navbar{
+    background:#6a0dad;
+    padding:15px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    text-decoration:underline;
 }
 
 .container{
     max-width:700px;
-    margin:auto;
+    margin:30px auto;
     background:white;
     padding:25px;
     border-radius:15px;
@@ -60,10 +70,23 @@ button:hover{
     margin-top:20px;
     padding:15px;
 }
+
+iframe{
+    width:100%;
+    height:600px;
+    border:none;
+    border-radius:10px;
+}
 </style>
 </head>
 
 <body>
+
+<nav class="navbar">
+    <a href="#">About</a>
+    <a href="#">Home</a>
+    <a href="#">Design</a>
+</nav>
 
 <div class="container">
 
@@ -97,7 +120,7 @@ A smarter way to choose what to eat at school.
 
 // DATABASE KANTIN
 const database_kantin = {
-    "mba dila": "https://canva.link/u0lmn6bp0lct6sj”,
+    "mba dila": "https://canva.link/u0lmn6bp0lct6sj",
     "mang atap": "https://canva.link/23gd8lad70bkzv8",
     "ceu siti": "https://canva.link/bke5w324a91pzwo",
     "kang udin": "https://canva.link/p14znnkxdtihzdj",
@@ -109,20 +132,10 @@ const database_kantin = {
     "pak iwan": "https://canva.link/2rgzh693d4pyfij"
 };
 
-// MEMASUKKAN DATA KE DROPDOWN
-const dropdown = document.getElementById("kantin");
-
-for (let nama in database_kantin) {
-    let option = document.createElement("option");
-    option.value = nama;
-    option.textContent = nama;
-    dropdown.appendChild(option);
-}
-
 // FUNGSI TOMBOL LIHAT MENU
 function lihatMenu() {
 
-    const pilihan = dropdown.value;
+    const pilihan = document.getElementById("kantin").value;
 
     if (pilihan === "") {
         alert("Silakan pilih kantin terlebih dahulu!");
@@ -135,18 +148,17 @@ function lihatMenu() {
         <h3>Kantin yang dipilih:</h3>
         <p><strong>${pilihan}</strong></p>
 
+        <iframe src="${link}"></iframe>
+
         <p>
             <a href="${link}" target="_blank">
-                Klik di sini untuk membuka menu
+                Buka Menu di Tab Baru
             </a>
         </p>
     `;
-
-    window.open(link, "_blank");
 }
 
 </script>
 
 </body>
 </html>
-
