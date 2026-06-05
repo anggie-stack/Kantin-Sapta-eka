@@ -1,14 +1,17 @@
 /* Place your CSS styles in this file */
-body {
+body{
     background-image: url("2e97a6fd-84b0-443f-a7f3-61004a056877.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
-    margin: 0;
-}
 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
 h1 {
     text-align: center;
     font-family: "Source Sans Pro", sans-serif;
