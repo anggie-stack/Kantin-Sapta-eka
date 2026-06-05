@@ -1,9 +1,10 @@
 /* Place your CSS styles in this file */
-body {
-    background-image: url('2e97a6fd-84b0-443f-a7f3-61004a056877.jpeg');
+body{
+    background-image: url("2e97a6fd-84b0-443f-a7f3-61004a056877.jpeg");
     background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
-
 h1 {
     text-align: center;
     font-family: "Source Sans Pro", sans-serif;
@@ -298,7 +299,10 @@ h1{
     font-weight: bold;
 }
 
-body {
-    background-image: url('2e97a6fd-84b0-443f-a7f3-61004a056877.jpeg');
+body{
+    background-image: url("2e97a6fd-84b0-443f-a7f3-61004a056877.jpeg");
     background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
+
