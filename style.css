@@ -210,3 +210,24 @@ iframe{
         height: 100% !important;
     }
 }    
+
+header{
+    background-color: #2e7d32;
+    padding: 15px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: lightgreen;
+}
